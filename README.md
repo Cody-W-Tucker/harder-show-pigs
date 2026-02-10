@@ -103,6 +103,23 @@ python3 cleanup/cleanup_wordpress.py
 python3 cleanup/fix_for_github_pages.py
 ```
 
+## Deployment
+
+### GitHub Pages
+
+To deploy the site to GitHub Pages:
+
+```bash
+# Push the src/ directory to the gh-pages branch
+git subtree push --prefix src origin gh-pages
+```
+
+This command pushes only the `src/` folder to the `gh-pages` branch, which GitHub Pages serves from. The site will be available at `https://hardershowpigs.github.io/harder/`.
+
+**Requirements:**
+- Push access to the repository
+- GitHub Pages enabled in repository settings (source: gh-pages branch)
+
 ## Technology Stack
 
 - **HTML5** - Static site markup
